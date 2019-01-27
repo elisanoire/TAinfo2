@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'animalerie/style.css' %}">
+    <title>Mon animalerie</title>
+</head>
+<body>
+    <h3>Mon animalerie</h3>
+    <div class="listes">
+        <div class="animalsList">
+            <h2>Les animaux :</h2>
+            {% for animal in animals %}
+                <div class="oneAnimal">
+                    <h1 class="name">{{animal.nom}}</h1>
+                    <p>Où : {{animal.lieu}}</p>
+                    <p>Etat : {{animal.etat}}</p>
+                    <p>Type d'animal : {{animal.type}}</p>
+                    <p>Race : {{animal.race}}</p>
+
+
+                </div>
+            {% endfor %}
+        </div>
+        <div class="equipementsList">
+            <h2>Les équipements :</h2>
+            {% for equipement in equipements %}
+                <div class="oneEquipement">
+                    <h1 class="name">{{equipement.nom}}</h1>
+                    <p>Disponibilité : {{equipement.dispo}}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="operationChoice">
+        <form action="{% url 'animalerie:action' %}" method="post">
+        {% csrf_token %}
+            <h2 class="labelChoix">Quelle action voulez-vous effectuer ?</h2>
+            <div class="flexChoix">
+                <div class="choixAnimal">
+                    <h2 class="labelTitle">Quel animal ?</h2>
+                    {% for animal in animals %}
+                        <input type="radio" name="animal" id="animal{{ forloop.counter }}" value="{{ animal.id }}">
+                        <label for="animal{{ forloop.counter }}">{{ animal.nom }}
+                        </label><br>
+                    {% endfor %}
+                </div>
+                <div class="choixAction">
+                    <h2 class="labelTitle" >Quelle action ?</h2>
+                    <form action="">
+                        <input type="radio" name="action" id="0" value="nourrir">Nourrir<br>
+                        <input type="radio" name="action" id="1" value="divertir">Divertir<br>
+                        <input type="radio" name="action" id="2" value="coucher">Coucher<br>
+                        <input type="radio" name="action" id="3" value="reveiller">Réveiller<br>
+                </div>
+            </div>
+
+            <button class="goAction" type="submit" value="Action">C'est parti </button>
+        </form>
+    </div>
+</body>
+<footer>
+</footer>
+</html>

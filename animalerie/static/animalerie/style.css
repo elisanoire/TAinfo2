@@ -1,0 +1,123 @@
+body {
+ font-family:tahoma, geneva, sans-serif;
+ }
+
+body {
+color:black;
+background-color:pink;
+}
+
+.oneAnimal {
+    border-radius: 10px;
+    background-color: lightgray;
+    color:black;
+    border : 1px solid black;
+    text-align: left;
+    margin-bottom:15px;
+    width:70%;
+    margin: auto;
+}
+
+.oneEquipement {
+    border-radius: 10px;
+    background-color: lightgray;
+    color:black;
+    border : 1px solid black;
+    text-align: left;
+    margin-bottom:15px;
+    width:70%;
+    margin: auto;
+}
+
+.name {
+    border-bottom : 2px solid black;
+    background-color: hotpink;
+    margin-top:0px;
+}
+
+
+h2{
+    text-align:center;
+    margin-bottom:15px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+
+.animalsList {
+    margin-left:80px
+    width:75%;
+}
+
+.equipementsList {
+    margin-left:80px
+    width:75%;
+    margin-bottom:50px
+}
+
+.listes {
+    %display: flex;
+    justify-content: space-around;
+    margin-bottom:10px;
+}
+
+p {
+    margin-bottom:0px;
+    margin-top:5px;
+}
+
+h3 {
+    font-size:40px;
+    text-align: center;
+    color : white;
+    background-color: black;
+}
+
+.flexChoix {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom:15px;
+    margin-bottom:0px;
+}
+
+.operationChoice{
+    border-radius: 10px;
+    background-color: lightgray;
+    border : 1px solid black;
+    width:80%;
+    margin:auto;
+    margin-bottom:50px;
+    text-align:center;
+    }
+
+.labelChoix {
+    border-bottom: 1px solid black;
+    background-color : 	hotpink;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+.choixAnimal {
+    border-radius: 10px;
+    border: 1px solid black;
+    width:50%;
+}
+
+.choixAction {
+    border-radius : 10px;
+    border: 1px solid black;
+    width:50%;
+}
+
+.labelTitle{
+    font-size : 30px;
+}
+
+.goAction {
+    margin-top : 10px;
+    background-color: floralwhite;
+    margin-bottom : 10px;
+    }
